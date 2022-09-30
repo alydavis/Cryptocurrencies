@@ -1,7 +1,7 @@
 # Cryptocurrencies
 
 ## Overview
-This unsupervised machine learning project analyzes cryptocurrency data to classify trading markets for investments. Since there is no known output, unsupervised machine learning was used to cluster the cryptocurrencies. 
+This project analyzes cryptocurrency data to look for trends for future investments. Since the final output was unknown, unsupervised machine learning was used to cluster the cryptocurrencies. 
 
 ## Resources
 - Datasource: [CryptoCompare](https://min-api.cryptocompare.com/data/all/coinlist)
@@ -12,22 +12,22 @@ This unsupervised machine learning project analyzes cryptocurrency data to class
 - SKLearn
 
 ### Processing Data
-Reviewing raw data, filtering for coins that are actively trading, removing null values, filtering for coins that have been mined and dropping unnecessary data columns for ML. Creating Variables for text features(Algorithm and ProofType) with get_dummies() and using the StandardScale to standardize the features.
+First I reviewed the raw data and removed any coins that were not actively trading. I also removed all null values to prepare for the ML modeling. I used the get_dummies() function to creating variables for the text features(Algorithm and ProofType) and standardized features.
 
 ### Reducing Data Dimensions Using PCA
-Reducing the dimensions to 3 principal components.
+Once the data was cleaned, I reduced the dimensions to 3 principal components.
 
 ### Clustering Cryptocurrencies Using K-means
-Creating an elbow curve with hvPlot to find the best value for K.
+To find the k value, I created an elbow curve with hvPlot. This shows the best value for K = 4.
 ![Elbow_curve](Images/01_ElbowCurve.png).
-
-K=4. Making predictions of the K clusters.
+With this K-value, I was able to make predictions for the clusters.
 
 ### Visualizing Cryptocurrencies
-3D Scatter Plot of all three clusters with the Coin Name and Algorithm 
+This 3D Scatter Plot shows all three clusters. When hovering over a data point, you'll see the Coin Name and Algorithm type.
 ![3D_Scatter](Images/02_3DPlot.png)
-Created a table with currencies
+
+Once the data was clustered, I saved a table with each curriencie's classification.
 ![Table](Images/03_Table.png)
 
-2D Scatter Plot of total Coins Mined vs. Total Coin supply by class.
+Lastly, this 2D Scatter Plot shows the total Coins Mined vs. Total Coin supply by class.
 ![2D_Scatter](Images/04_Scatter.png)
