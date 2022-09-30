@@ -19,7 +19,7 @@ Once the data was cleaned, I reduced the dimensions to 3 principal components.
 
 ### Clustering Cryptocurrencies Using K-means
 To find the k value, I created an elbow curve with hvPlot. This shows the best value for K = 4.
-![Elbow_curve](Images/01_ElbowCurve.png).
+![Elbow_curve](Images/01_ElbowCurve.png)
 With this K-value, I was able to make predictions for the clusters.
 
 ### Visualizing Cryptocurrencies
